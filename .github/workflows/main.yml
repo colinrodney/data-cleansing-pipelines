@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run CI/CD Tests
-        run: python ../../../test_directory/module1
+        run: python /Users/Cessn/OneDrive/Desktop/data_cleansing_CI_CD_pipeline/test_directory/module1
       # run: echo "This is the test run!"
