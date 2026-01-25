@@ -11,4 +11,4 @@ jobs:
       #  run: pip install -r requirements.txt
       - name: Run CI/CD Tests
         # run: echo "This is the test run!"
-        run: python ../../test_directory/module1
+        run: python echo test_directory/module1
