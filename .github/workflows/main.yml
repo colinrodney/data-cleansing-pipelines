@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run CI/CD Tests
       # run: echo "This is the test run!"
-        run: python test_directory/module1
+        run: python test_directory/module1.py
