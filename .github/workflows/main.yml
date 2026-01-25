@@ -5,7 +5,19 @@ on: [push]
 jobs:
   clean:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Run CI/CD Tests
-        run: python ../../main.py
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12.3"
+      
+      - name: Run Python script (CI/CD Testing)
+
+        # working-directory tells steps where to run its Python scripts
+        working-directory: C/Users/Cessn/OneDrive/Desktop/data_cleansing_CI_CD_pipeline
+          
+        run: python main.py
