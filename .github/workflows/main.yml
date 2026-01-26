@@ -18,6 +18,6 @@ jobs:
       - name: Run Python script (CI/CD Testing)
 
         # working-directory tells steps where to run its Python scripts
-        run: python ../../main.py
+        run: python main.py
         # working-directory: 
           
