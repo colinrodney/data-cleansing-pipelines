@@ -19,5 +19,5 @@ jobs:
 
         # working-directory tells steps where to run its Python scripts
         run: python main.py
-        # working-directory: /Users/Cessn/OneDrive/Desktop/data_cleansing_CI_CD_pipeline
+        working-directory: r"C:\Users\Cessn\OneDrive\Desktop\data_cleansing_CI_CD_pipeline"
           
