@@ -10,5 +10,5 @@ import test_directory.ingest_data
 # Invoke functions
 test_directory.module1.func1()
 test_directory.module2.func2()
-df_2 = test_directory.ingest_data()
-df_2.info()
+test_directory.ingest_data.ingest_data()
+
