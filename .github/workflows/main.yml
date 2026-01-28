@@ -1,5 +1,7 @@
-name: testing
+# NOTE: To avoid dependency installation issues etc.,
+# De mindful of how actions are ordered in "steps" section!
 
+name: testing
 on: [push]
 
 jobs:
@@ -7,11 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Project Dependencies
-        # run: pip install -r requirements.txt
-        run: pip3 install -r requirements.txt
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -19,10 +16,16 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12.3"
-      
-      - name: Run Python script (CI/CD Testing)
 
-        # working-directory tells steps where to run its Python scripts
+      - uses: actions/checkout@v4
+      - name: Install Project Dependencies
+        run: pip3 install -r requirements.txt
+
+      - name: Run Python script (CI/CD Testing)
         run: python main.py
-        # working-directory: 
+        # working-directory (OPTIONAL- Commands script execution in specified directory.)
+
+
+      
+      
           
