@@ -5,7 +5,7 @@ def ingest_data():
         except:
              print("EXCEPTION - Pandas import not successfull.")
         else:
-            df = pd.read_csv(r"C:\Users\Cessn\OneDrive\Desktop\data_cleansing_CI_CD_pipeline\.github\workflows\dirty_cafe_sales-csv.csv")
+            df = pd.read_csv("dirty_cafe_sales-csv.csv")
             df_2 = df.copy()
             df_2.info()
             print("ingest data function ran successfully! RETURNING file to function!")
